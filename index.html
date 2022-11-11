@@ -40,7 +40,12 @@
             </ul>
             <h2>nested array</h2>
             <ul id = "nested"></ul>
-            
+            <h2>slicing the favorite array</h2>
+            <ul id="slice"></ul>
+            <h2>Shifting the frist element of the array</h2>
+            <ul id="shifting"></ul>
+            <h2>UnShifting </h2>
+            <ul id="un-shifting"></ul>
         </div>
     </main>
     <script>
@@ -88,6 +93,22 @@
         popped.innerHTML = displayArray(favArray);
 
         //Exercises 9-12, practice slice(), shift(), unshift() in arrays.js
+
+        //slice();
+        let sliced = document.getElementById('slice');
+        let slicing = favArray.slice(2, 4);
+        sliced.innerHTML = displayArray(slicing);
+
+        //shift();
+        let shifted = document.getElementById('shifting');
+        let shiftedArray = favArray.shift();
+        shifted.innerHTML = displayArray(shiftedArray);
+
+        //unshift();
+        let unShifted = document.getElementById('un-shifting');
+        let unShiftedArray = favArray.unshift('HP');
+        unShifted.innerHTML = displayArray(favArray);
+
         favArray.forEach(function (item){
             myList.innerHTML += `<li>${item}</li>`;
         });
